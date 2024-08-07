@@ -1,0 +1,8 @@
+<launch>
+<node pkg="uart__robot_package" type="my_uart_node" name="my_uart_node"  output="screen">
+  <param name="port_name" type="string" value="/dev/ttyS2" /> <!--串口号-->
+  <param name="baud_rate" type="int" value="19200" /> <!--波特率-->
+  <param name="remot_rate" type="string" value="08 03 00 01 00 01 D5 53" /> <!--遥控器-->
+  <param name="sensor_rate" type="string" value="01 03 00 01 00 0B 55 CD" /> <!--传感器-->
+</node>
+</launch>

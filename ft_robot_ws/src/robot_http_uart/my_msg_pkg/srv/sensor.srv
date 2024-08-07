@@ -1,0 +1,9 @@
+# 客户端请求时发送的两个数字
+int32 request
+---
+# 服务器响应发送的数据
+# 定义一个包含温度、湿度、烟雾和噪声的传感器数据消息类型
+float32 temperature    # 温度，使用float32类型
+int32 humidity         # 湿度，使用int32类型
+float32 smoke          # 烟雾浓度，使用float32类型
+int32 noise            # 噪声水平，使用int32类型

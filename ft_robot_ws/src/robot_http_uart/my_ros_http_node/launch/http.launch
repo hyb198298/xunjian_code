@@ -1,0 +1,4 @@
+<launch>
+<node pkg="my_ros_http_node" type="my_ros_http_node" name="my_ros_http_node"  output="screen">
+</node>
+</launch>

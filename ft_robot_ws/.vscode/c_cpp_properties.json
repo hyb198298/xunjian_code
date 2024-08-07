@@ -1,0 +1,45 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ft/ft_robot_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/amcl/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/base_local_planner/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/carrot_planner/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/clear_costmap_recovery/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/costmap_2d/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/dwa_local_planner/include/**",
+        "/home/ft/ft_robot_ws/src/robot_http_uart/ft_voice_package/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/global_planner/include/**",
+        "/home/ft/ft_robot_ws/src/laserscan_to_pointcloud/include/**",
+        "/home/ft/ft_robot_ws/src/laser_m10p/lslidar_driver/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/map_server/include/**",
+        "/home/ft/ft_robot_ws/src/robot_http_uart/master_robot_package/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/move_base/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/move_slow_and_clear/include/**",
+        "/home/ft/ft_robot_ws/src/robot_http_uart/my_msg_pkg/include/**",
+        "/home/ft/ft_robot_ws/src/robot_http_uart/my_ros_http_node/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/nav_core/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/navfn/include/**",
+        "/home/ft/ft_robot_ws/src/gmapping/openslam_gmapping/include/**",
+        "/home/ft/ft_robot_ws/src/robot_pose_ekf/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/rotate_recovery/include/**",
+        "/home/ft/ft_robot_ws/src/turn_on_wheeltec_robot/include/**",
+        "/home/ft/ft_robot_ws/src/robot_http_uart/uart__robot_package/include/**",
+        "/home/ft/ft_robot_ws/src/navigation-melodic/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
