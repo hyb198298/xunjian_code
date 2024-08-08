@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hyb/nav_fanfzhen/devel/include/gmapping/sensor/sensor_base/sensor_base_export.h
+
+/home/hyb/nav_fanfzhen/src/gamappig/openslam_gmapping/include/gmapping/sensor/sensor_base/sensor.h
+string
+-
+map
+-
+gmapping/sensor/sensor_base/sensor_base_export.h
+-
+
+/home/hyb/nav_fanfzhen/src/gamappig/openslam_gmapping/include/gmapping/sensor/sensor_base/sensorreading.h
+gmapping/sensor/sensor_base/sensor.h
+/home/hyb/nav_fanfzhen/src/gamappig/openslam_gmapping/include/gmapping/sensor/sensor_base/gmapping/sensor/sensor_base/sensor.h
+gmapping/sensor/sensor_base/sensor_base_export.h
+-
+
+/home/hyb/nav_fanfzhen/src/gamappig/openslam_gmapping/sensor/sensor_base/sensor.cpp
+gmapping/sensor/sensor_base/sensor.h
+/home/hyb/nav_fanfzhen/src/gamappig/openslam_gmapping/sensor/sensor_base/gmapping/sensor/sensor_base/sensor.h
+
+/home/hyb/nav_fanfzhen/src/gamappig/openslam_gmapping/sensor/sensor_base/sensorreading.cpp
+gmapping/sensor/sensor_base/sensorreading.h
+/home/hyb/nav_fanfzhen/src/gamappig/openslam_gmapping/sensor/sensor_base/gmapping/sensor/sensor_base/sensorreading.h
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20240723-1354-Experimental"
+	Name="hyb-virtual-machine"
+	Generator="ctest-3.10.2"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="7.5.0"
+	OSName="Linux"
+	Hostname="hyb-virtual-machine"
+	OSRelease="5.4.0-150-generic"
+	OSVersion="#167~18.04.1-Ubuntu SMP Wed May 24 00:51:42 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="183"
+	ProcessorCacheSize="36864"
+	NumberOfLogicalCPU="2"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="3901"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="2419.2"
+	>
+	<Testing>
+		<StartDateTime>Jul 23 21:54 CST</StartDateTime>
+		<StartTestTime>1721742890</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jul 23 21:54 CST</EndDateTime>
+		<EndTestTime>1721742890</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

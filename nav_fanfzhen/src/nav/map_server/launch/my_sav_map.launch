@@ -1,0 +1,4 @@
+<launch>
+    <arg name="filename" value="/home/hyb/nav_fanfzhen/src/nav/map_server/config/map" />
+    <node name="map_save" pkg="map_server" type="/home/hyb/nav_fanfzhen/src/nav/map_server/config/map" args="-f $(arg filename)" />
+</launch>

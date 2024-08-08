@@ -1,0 +1,37 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/hyb/nav_fanfzhen/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/amcl/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/base_local_planner/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/carrot_planner/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/clear_costmap_recovery/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/costmap_2d/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/dwa_local_planner/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/global_planner/include/**",
+        "/home/hyb/nav_fanfzhen/src/goal_publisher/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/map_server/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/move_base/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/move_slow_and_clear/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/nav_core/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/navfn/include/**",
+        "/home/hyb/nav_fanfzhen/src/gamappig/openslam_gmapping/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/rotate_recovery/include/**",
+        "/home/hyb/nav_fanfzhen/src/nav/navigation/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
