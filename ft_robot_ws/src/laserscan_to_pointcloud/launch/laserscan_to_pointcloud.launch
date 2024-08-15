@@ -1,0 +1,14 @@
+<launch>
+<node pkg="laserscan_to_pointcloud" type="laserscan_to_pointcloud" name="laserscan_to_pointcloud"  output="screen">
+<!--小车前面矩形-->
+  <param name="front_x_down"  value="0.0" /> 
+  <param name="front_x_up" value="0.8" /> 
+  <param name="front_y_down"  value="-0.35" />
+  <param name="front_y_up"  value="0.35" />
+<!--小车后面矩形-->
+  <param name="back_x_down"  value="-0.8" /> 
+  <param name="back_x_up"  value="-0.0" /> 
+  <param name="back_y_down" value="-0.35" />
+  <param name="back_y_up"  value="0.35" />
+</node>
+</launch>

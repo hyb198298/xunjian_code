@@ -1,0 +1,4 @@
+<launch>
+<node pkg="ft_voice_package" type="ft_voice_node" name="ft_voice_node"  output="screen">
+</node>
+</launch>

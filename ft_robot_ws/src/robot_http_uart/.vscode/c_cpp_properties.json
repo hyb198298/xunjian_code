@@ -1,0 +1,50 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/ft/robot_xunjian_test/devel/include/**",
+                "/home/ft/wheeltec_robot/devel/include/**",
+                "/home/ft/rviz_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/amcl/include/**",
+                "/home/ft/rviz_ws/src/app_server/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/base_local_planner/include/**",
+                "/home/ft/rviz_ws/src/better_astar_global_planner/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/carrot_planner/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/clear_costmap_recovery/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/costmap_2d/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/dwa_local_planner/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/global_planner/include/**",
+                "/home/ft/catkin_ws/src/http_server_pkg/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/map_server/include/**",
+                "/home/ft/robot_xunjian_test/src/master_robot_package/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/move_base/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/move_slow_and_clear/include/**",
+                "/home/ft/robot_xunjian_test/src/my_msg_pkg/include/**",
+                "/home/ft/robot_xunjian_test/src/my_robot_package/include/**",
+                "/home/ft/robot_xunjian_test/src/my_ros_http_node/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/nav_core/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/navfn/include/**",
+                "/home/ft/rviz_ws/src/robot_main/include/**",
+                "/home/ft/wheeltec_robot/src/robot_pose_ekf/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/rotate_recovery/include/**",
+                "/home/ft/wheeltec_robot/src/turn_on_wheeltec_robot/include/**",
+                "/home/ft/robot_xunjian_test/src/uart__robot_package/include/**",
+                "/home/ft/wheeltec_robot/src/navigation-melodic/voxel_grid/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/src/master_robot_package/include",
+                "/opt/ros/melodic/include"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
+}

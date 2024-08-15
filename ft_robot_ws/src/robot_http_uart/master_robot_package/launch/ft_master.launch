@@ -1,0 +1,4 @@
+<launch>
+<node pkg="master_robot_package" type="master_node" name="master_node"  output="screen">
+</node>
+</launch>
