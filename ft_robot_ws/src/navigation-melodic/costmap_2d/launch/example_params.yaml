@@ -1,0 +1,128 @@
+# #机器人几何参，如果机器人是圆形，设置 robot_radius,如果是其他形状设置 footprint
+# robot_radius: 0.12 #圆形
+# # footprint: [[-0.12, -0.12], [-0.12, 0.12], [0.12, 0.12], [0.12, -0.12]] #其他形状
+# obstacle_range: 3.0 # 用于障碍物探测，比如: 值为 3.0，意味着检测到距离小于 3 米的障碍物时，就会引入代价地图
+# raytrace_range: 3.5 # 用于清除障碍物，比如：值为 3.5，意味着清除代价地图中 3.5 米以外的障碍物
+# #膨胀半径，扩展在碰撞区域以外的代价区域，使得机器人规划路径避开障碍物
+# inflation_radius: 0.2
+# #代价比例系数，越大则代价值越小
+# cost_scaling_factor: 3.0
+# #地图类型
+# map_type: costmap
+# #导航包所需要的传感器
+# observation_sources: scan
+# #对传感器的坐标系和数据进行配置。这个也会用于代价地图添加和清除障碍物。例如，你可以用激光雷达传感器用于在代价地图添加障碍物，再添加kinect用于导航和清除障碍物。
+# scan: {sensor_frame: laser, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+# global_frame: odom #里程计坐标系
+# robot_base_frame: base_footprint #机器人坐标系
+# update_frequency: 2.0 #代价地图更新频率
+# publish_frequency: 2.0 #代价地图的发布频率
+# transform_tolerance: 0.5 #等待坐标变换发布信息的超时时间
+# static_map: false  #不需要静态地图，可以提升导航效果
+# rolling_window: true #是否使用动态窗口，默认为false，在静态的全局地图中，地图不会变化
+# width: 6 # 局部地图宽度 单位是 m
+# height: 3 # 局部地图高度 单位是 m
+# resolution: 0.05 # 局部地图分辨率 单位是 m，一般与静态地图分辨率保持一致
+# plugins:
+#   - {name: static_layer, type: "costmap_2d::StaticLayer"}
+#   - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+#   - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+
+static_layer:
+  #是否开启静态层
+  enabled: true
+  #静态层的订阅的地图话题
+  map_topic: map
+  #地图话题中数据值为多少，会转换为静态层代价地图中的未知区域
+  unknown_cost_value: -1
+  #地图话题中数据值为多少，会转换为静态层代价地图中的完全占用区域
+  lethal_cost_threshold: 100
+  #是否仅把第一次订阅到的地图数据转换为静态层代价地图，无视后续订阅到的地图数据
+  first_map_only: false
+  #是否订阅话题 “map_topic”+“_updates”
+  subscribe_to_updates: false
+  #如果设置为false，地图话题中的未知区域在代价地图中会转换为自由区域
+  track_unknown_space: true
+  #如果设置为true，静态层代价地图只有未知、自由和完全占用三种情况
+  #如果设置为false，静态层代价地图可以有不同的占用程度
+  trinary_costmap: true
+
+#设置障碍层参数
+obstacle_layer:
+  #是否开启障碍层
+  enabled: true
+  #设置障碍层的观测源名称，可以一次设置多个观测源observation_sources: scan, scan2, camera
+  observation_sources: scan
+  #设置对应观测源参数
+  scan:
+    #观测源数据话题名称
+    topic: scan
+    #观测源的TF坐标名称，如果设置为空，会自动从话题数据寻找TF坐标名称
+    #以下三种数据格式支持自动寻找TF坐标名称
+    #sensor_msgs/LaserScan, sensor_msgs/PointCloud, and sensor_msgs/PointCloud2
+    sensor_frame: laser
+    #观测源话题的数据格式，可以为LaserScan、PointCloud、PointCloud2
+    data_type: LaserScan
+    #保留多久时间内的全部话题数据作为障碍层输入，设置为0代表只保留最近的一帧数据，单位：s
+    observation_persistence: 0.0
+    #读取观测源话题的频率，如果进行设置，频率应该设置的比传感器频率低一些。默认0，代表允许观测源一直不发布话题。单位：Hz
+    expected_update_rate: 0.0
+    #是否使用该观测源清除自由空间
+    clearing: true
+    #是否使用该观测源添加障碍物
+    marking: true
+    #高于多少的障碍物不加入观测范围，单位：m
+    max_obstacle_height: 2.0
+    #低于多少的障碍物不加入观测范围，单位：m
+    min_obstacle_height: 0.0
+    #多少范围内障碍物会被加入代价地图，单位：m
+    obstacle_range: 2.5
+    #多少范围内障碍物会被追踪，单位：m
+    raytrace_range: 3.0
+
+  #在观测源基础上再次进行设置的参数
+  #高于多少的障碍物不加入观测范围，单位：m
+  max_obstacle_height:  2.0
+  #多少范围内障碍物会被加入代价地图，单位：m
+  obstacle_range: 2.5
+  #多少范围内障碍物会被追踪，单位：m
+  raytrace_range: 3.0
+
+  #如果设置为true，障碍层代价地图会有未知、自由和完全占用三种情况
+  #如果设置为false，障碍层代价地图只有自由和完全占用两种情况
+  track_unknown_space: true
+  #障碍层如何与其它地图层处理的方法。
+  #0：障碍层覆盖其它地图层； 1:障碍物最大化方法，即各层的占用方格会覆盖其它层的自由方格，这是最常用的方法
+  #99：不改变其它地图层，应该是使障碍层层无效的方法
+  combination_method: 1
+local_costmap:
+  #代价地图的TF参考坐标系
+  global_frame: map
+  #机器人的TF坐标名称
+  robot_base_frame: base_footprint
+  #global_frame和robot_base_frame间的TF坐标停止发布多久后，控制机器人停止，单位：s
+  transform_tolerance: 0.5
+  #代价地图刷新频率，单位：Hz
+  update_frequency: 5.0
+  #代价地图的可视化话题发布频率，单位：Hz
+  publish_frequency: 3.0
+
+  #是否直接使用静态地图生成代价地图
+  #static_map: false #使用plugins手动配置代价地图时，该参数无效
+  #代价地图是否跟随机器人移动，static_map为true时该参数必须为false
+  rolling_window: true
+  #代价地图长，单位：m
+  width: 6.0 
+  #代价地图宽度，单位：m
+  height: 3.0 
+  #代价地图分辨率（米/单元格）
+  resolution: 0.05 
+  cost_scaling_factor: 2.58
+  inlation_radius: 0.01
+  #为代价地图设置地图层，这里设置了两层，分别作为障碍层和膨胀层
+  #局部代价动态要求高刷新率，不使用静态层以节省计算资源
+  plugins:
+    #定义地图层的名称，设置地图层的类型
+    - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}
+    #定义地图层的名称，设置地图层的类型
+    - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
